@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация и форма обратной связи магазина Домика.">
+  <meta name="theme-color" content="#f7f6f1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <title>Контакты - Домика</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Домика - на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a>
+      <nav class="site-nav" id="site-navigation" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="product.html?item=vase">Товар недели</a></li><li><a href="contacts.html" aria-current="page">Контакты</a></li></ul></nav>
+      <div class="header-actions"><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button><a class="cart-link" href="order.html"><span>Заказ</span><span class="sr-only">Товаров в учебной корзине: </span><span class="cart-count" data-cart-count>0</span></a></div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-intro" aria-labelledby="page-title">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Контакты</span></nav>
+      <p class="eyebrow">Давайте знакомиться</p>
+      <h1 id="page-title">Мы на связи</h1>
+      <p class="lead">Поможем с выбором, расскажем о материалах и ответим на вопросы о заказе. Напишите нам удобным способом.</p>
+    </section>
+
+    <div class="form-layout">
+      <section class="form-card" id="contact-form" aria-labelledby="contact-form-title">
+        <h2 id="contact-form-title">Написать нам</h2>
+        <p class="form-intro">Оставьте сообщение - форма демонстрационная, данные не отправляются на сервер.</p>
+        <form id="feedback-form" data-demo-form>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="contact-name">Как к вам обращаться? <span aria-hidden="true">*</span></label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Электронная почта <span aria-hidden="true">*</span></label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="name@example.ru" required>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-topic">Тема обращения</label>
+              <select id="contact-topic" name="topic">
+                <option value="selection">Помощь с выбором</option>
+                <option value="delivery">Доставка и сроки</option>
+                <option value="materials">Материалы и уход</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="form-field form-field-full">
+              <label for="contact-message">Сообщение <span aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Расскажите, чем мы можем помочь" required></textarea>
+              <p class="field-hint">Не указывайте здесь платёжные или другие чувствительные данные.</p>
+            </div>
+          </div>
+          <div class="consent"><label class="checkbox-label"><input type="checkbox" name="consent" required><span>Я согласен(на) на обработку данных для ответа на обращение <span aria-hidden="true">*</span></span></label></div>
+          <div class="form-actions"><button class="button" type="submit">Отправить сообщение <span aria-hidden="true">→</span></button><span class="field-hint">Учебный интерфейс, без backend.</span></div>
+          <p class="form-status" id="contact-status" data-form-status role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+      </section>
+
+      <aside>
+        <section class="info-card" aria-labelledby="contact-info-title">
+          <p class="eyebrow eyebrow-light">Загляните к нам</p>
+          <h2 id="contact-info-title">Контактная информация</h2>
+          <ul class="contact-list">
+            <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><strong>Почта</strong><a href="mailto:domika_for_business@domika.ru">domika_for_business@domika.ru</a></span></li>
+            <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h3l2 5-2.2 1.6a14 14 0 0 0 4.6 4.6L16 12l5 2v3c0 1.1-.9 2-2 2C10.7 19 5 13.3 5 6c0-1.7.8-3 2-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><strong>Телефон</strong><a href="tel:+78005553535">8(977)-123-45-67</a></span></li>
+            <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg></span><div><strong>Адрес</strong><address class="contact-address">г. Москва, пр-кт Вернадского, 78</address></div></li>
+            <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span><strong>Часы работы</strong><span>Пн–Пт, 9:00–21:00</span></span></li>
+          </ul>
+          <p class="contact-note">Адрес и контакты приведены для учебного макета.</p>
+        </section>
+        <figure class="map-card">
+          <svg viewBox="0 0 600 240" role="img" aria-labelledby="map-title map-description" xmlns="http://www.w3.org/2000/svg">
+            <title id="map-title">Схема расположения мастерской</title>
+            <desc id="map-description">Условная карта квартала с отметкой магазина Домика; схема не является навигационной.</desc>
+            <rect width="600" height="240" fill="#e6eadf"/>
+            <path d="M-20 57 620 184M-30 215 594 27M150-20 340 265M480-20 295 260" stroke="#fffefa" stroke-width="22" fill="none"/>
+            <path d="M0 106 600 92M76 0 85 240M389 0 403 240" stroke="#d1d9ca" stroke-width="3" fill="none"/>
+            <path d="M0 193c90-40 150-25 220-52 70-27 108-17 166-10 70 9 117-31 214-60" stroke="#c3d3cf" stroke-width="16" fill="none"/>
+            <path d="M0 193c90-40 150-25 220-52 70-27 108-17 166-10 70 9 117-31 214-60" stroke="#f4f5ee" stroke-width="2" stroke-dasharray="7 7" fill="none"/>
+            <circle cx="317" cy="111" r="25" fill="#29483b" opacity=".12"/>
+            <path d="M317 77c-15 0-27 12-27 27 0 19 27 49 27 49s27-30 27-49c0-15-12-27-27-27Z" fill="#29483b"/>
+            <circle cx="317" cy="104" r="9" fill="#fffefa"/>
+            <rect x="344" y="112" width="114" height="35" rx="17.5" fill="#fffefa"/>
+            <text x="401" y="135" text-anchor="middle" font-size="15" font-family="system-ui, sans-serif" font-weight="700" fill="#24342c">Домика</text>
+          </svg>
+          <figcaption class="map-caption">Условная схема района · неинтерактивная иллюстрация.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div><a class="brand footer-brand" href="index.html" aria-label="Домика - на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a><p class="footer-copy">Небольшой учебный магазин предметов для дома. Вещи, которые помогают замедлиться и почувствовать своё пространство.</p></div>
+    <div><h2 class="footer-title">Магазин</h2><ul class="footer-links"><li><a href="catalog.html">Каталог</a></li><li><a href="product.html?item=vase">Карточка товара</a></li><li><a href="order.html">Оформить заказ</a></li></ul></div>
+    <div><h2 class="footer-title">Помощь</h2><ul class="footer-links"><li><a href="contacts.html">Контакты</a></li><li><a href="contacts.html#contact-form">Задать вопрос</a></li><li><a href="README.md">О проекте</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© <span data-year>2026</span> Домика · учебный проект</p><p>Сделано с вниманием к деталям и доступности.</p></div></div></footer>
+  <div class="visually-polite" id="site-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

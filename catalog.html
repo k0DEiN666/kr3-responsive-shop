@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог Домика: керамика, текстиль, свет и предметы для дома.">
+  <meta name="theme-color" content="#f7f6f1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <title>Каталог — Домика</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Домика — на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a>
+      <nav class="site-nav" id="site-navigation" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html" aria-current="page">Каталог</a></li><li><a href="product.html?item=vase">Товар недели</a></li><li><a href="contacts.html">Контакты</a></li></ul></nav>
+      <div class="header-actions"><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button><a class="cart-link" href="order.html"><span>Заказ</span><span class="sr-only">Товаров в учебной корзине: </span><span class="cart-count" data-cart-count>0</span></a></div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-intro" aria-labelledby="page-title">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Каталог</span></nav>
+      <p class="eyebrow">Вещи для дома</p>
+      <h1 id="page-title">Каталог</h1>
+      <p class="lead">Предметы из небольших мастерских — выберите категорию, настройте фильтры и найдите вещь, которая подойдёт именно вашему дому.</p>
+    </section>
+
+    <div class="catalog-layout">
+      <aside aria-label="Фильтры каталога">
+        <details class="filter-panel" id="filter-panel" open>
+          <summary>Фильтры</summary>
+          <div class="filter-content">
+            <form id="catalog-filters">
+              <fieldset class="filter-group">
+                <legend>Категория</legend>
+                <label class="check-row"><input type="checkbox" name="category" value="decor" data-filter-category> Декор</label>
+                <label class="check-row"><input type="checkbox" name="category" value="textiles" data-filter-category> Текстиль</label>
+                <label class="check-row"><input type="checkbox" name="category" value="lighting" data-filter-category> Свет</label>
+                <label class="check-row"><input type="checkbox" name="category" value="furniture" data-filter-category> Мебель</label>
+                <label class="check-row"><input type="checkbox" name="category" value="tableware" data-filter-category> Посуда</label>
+              </fieldset>
+              <div class="filter-group">
+                <label class="filter-label" for="max-price">Цена: до</label>
+                <input class="price-range" id="max-price" type="range" min="2000" max="35000" step="500" value="35000">
+                <output class="range-output" id="max-price-output" for="max-price">35 000 ₽</output>
+              </div>
+              <button class="filter-reset" type="reset">Сбросить фильтры</button>
+            </form>
+          </div>
+        </details>
+      </aside>
+
+      <section class="catalog-main" aria-label="Товары">
+        <div class="catalog-toolbar">
+          <div class="form-field">
+            <label class="sr-only" for="product-search">Поиск по товарам</label>
+            <input class="filter-search" id="product-search" type="search" placeholder="Например, керамика" autocomplete="off">
+          </div>
+          <div class="form-field">
+            <label class="filter-label" for="sort-products">Сортировка</label>
+            <select class="filter-select" id="sort-products">
+              <option value="featured">Сначала избранное</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="name">По названию</option>
+            </select>
+          </div>
+        </div>
+        <div class="catalog-summary"><p class="catalog-count" id="product-count" aria-live="polite" aria-atomic="true">В каталоге 6 товаров</p></div>
+        <div class="product-grid catalog-grid" id="catalog-products" data-product-grid>
+          <article class="product-card" data-product-id="vase" data-category="decor" data-price="4200" data-search="ваза оре декор керамика">
+            <a class="product-media" href="product.html?item=vase" aria-label="Подробнее о вазе Оре">
+              <picture><source type="image/webp" srcset="images/vase-480.webp 480w, images/vase-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/vase-960.jpg" srcset="images/vase-480.jpg 480w, images/vase-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Терракотовая ваза ручной работы с веточками" width="960" height="720" loading="lazy"></picture><span class="product-badge">Хит</span>
+            </a>
+            <div class="product-body"><p class="product-category">Декор</p><h2 class="product-title"><a href="product.html?item=vase">Ваза «Оре»</a></h2><p class="product-material">Керамика ручной работы</p><div class="product-card-footer"><span class="price">4 200 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Ваза «Оре»" aria-label="Добавить вазу Оре в учебную корзину">В корзину</button></div></div>
+          </article>
+          <article class="product-card" data-product-id="throw" data-category="textiles" data-price="8900" data-search="плед линии текстиль лен хлопок">
+            <a class="product-media" href="product.html?item=throw" aria-label="Подробнее о пледе Линии">
+              <picture><source type="image/webp" srcset="images/throw-480.webp 480w, images/throw-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/throw-960.jpg" srcset="images/throw-480.jpg 480w, images/throw-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Сложенный оливковый плед с фактурной тканью" width="960" height="720" loading="lazy"></picture><span class="product-badge">Новинка</span>
+            </a>
+            <div class="product-body"><p class="product-category">Текстиль</p><h2 class="product-title"><a href="product.html?item=throw">Плед «Линии»</a></h2><p class="product-material">Лён и хлопок, 130 × 180 см</p><div class="product-card-footer"><span class="price">8 900 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Плед «Линии»" aria-label="Добавить плед Линии в учебную корзину">В корзину</button></div></div>
+          </article>
+          <article class="product-card" data-product-id="lamp" data-category="lighting" data-price="12800" data-search="лампа тундра свет освещение металл">
+            <a class="product-media" href="product.html?item=lamp" aria-label="Подробнее о лампе Тундра">
+              <picture><source type="image/webp" srcset="images/lamp-480.webp 480w, images/lamp-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/lamp-960.jpg" srcset="images/lamp-480.jpg 480w, images/lamp-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Настольная лампа Тундра с терракотовым абажуром" width="960" height="720" loading="lazy"></picture><span class="product-badge">Мягкий свет</span>
+            </a>
+            <div class="product-body"><p class="product-category">Свет</p><h2 class="product-title"><a href="product.html?item=lamp">Лампа «Тундра»</a></h2><p class="product-material">Металл, тёплый рассеянный свет</p><div class="product-card-footer"><span class="price">12 800 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Лампа «Тундра»" aria-label="Добавить лампу Тундра в учебную корзину">В корзину</button></div></div>
+          </article>
+          <article class="product-card" data-product-id="chair" data-category="furniture" data-price="34900" data-search="кресло мягкий дом мебель дерево">
+            <a class="product-media" href="product.html?item=chair" aria-label="Подробнее о кресле Мягкий дом">
+              <picture><source type="image/webp" srcset="images/chair-480.webp 480w, images/chair-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/chair-960.jpg" srcset="images/chair-480.jpg 480w, images/chair-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Небольшое кресло с зелёной спинкой и деревянным каркасом" width="960" height="720" loading="lazy"></picture>
+            </a>
+            <div class="product-body"><p class="product-category">Мебель</p><h2 class="product-title"><a href="product.html?item=chair">Кресло «Мягкий дом»</a></h2><p class="product-material">Ясень и плотная мебельная ткань</p><div class="product-card-footer"><span class="price">34 900 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Кресло «Мягкий дом»" aria-label="Добавить кресло Мягкий дом в учебную корзину">В корзину</button></div></div>
+          </article>
+          <article class="product-card" data-product-id="mug" data-category="tableware" data-price="2400" data-search="кружка фьорд посуда керамика чашка">
+            <a class="product-media" href="product.html?item=mug" aria-label="Подробнее о кружке Фьорд">
+              <picture><source type="image/webp" srcset="images/mug-480.webp 480w, images/mug-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/mug-960.jpg" srcset="images/mug-480.jpg 480w, images/mug-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Песочная керамическая кружка с блюдцем" width="960" height="720" loading="lazy"></picture>
+            </a>
+            <div class="product-body"><p class="product-category">Посуда</p><h2 class="product-title"><a href="product.html?item=mug">Кружка «Фьорд»</a></h2><p class="product-material">Керамика, объём 320 мл</p><div class="product-card-footer"><span class="price">2 400 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Кружка «Фьорд»" aria-label="Добавить кружку Фьорд в учебную корзину">В корзину</button></div></div>
+          </article>
+          <article class="product-card" data-product-id="tray" data-category="tableware" data-price="3800" data-search="поднос дуб дерево посуда сервировка">
+            <a class="product-media" href="product.html?item=tray" aria-label="Подробнее о дубовом подносе Ритм">
+              <picture><source type="image/webp" srcset="images/tray-480.webp 480w, images/tray-960.webp 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw"><img src="images/tray-960.jpg" srcset="images/tray-480.jpg 480w, images/tray-960.jpg 960w" sizes="(max-width: 699px) 48vw, (max-width: 1023px) 30vw, 22vw" alt="Деревянный поднос с ручками, чашкой и льняной салфеткой" width="960" height="720" loading="lazy"></picture><span class="product-badge">Мастерская</span>
+            </a>
+            <div class="product-body"><p class="product-category">Посуда</p><h2 class="product-title"><a href="product.html?item=tray">Поднос «Ритм»</a></h2><p class="product-material">Массив дуба с натуральным маслом</p><div class="product-card-footer"><span class="price">3 800 ₽</span><button class="button button-small" type="button" data-add-to-cart data-product-label="Поднос «Ритм»" aria-label="Добавить поднос Ритм в учебную корзину">В корзину</button></div></div>
+          </article>
+          <p class="no-products" id="no-products" hidden>По выбранным условиям ничего не найдено. Попробуйте изменить фильтры.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div><a class="brand footer-brand" href="index.html" aria-label="Домика — на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a><p class="footer-copy">Небольшой учебный магазин предметов для дома. Вещи, которые помогают замедлиться и почувствовать своё пространство.</p></div>
+    <div><h2 class="footer-title">Магазин</h2><ul class="footer-links"><li><a href="catalog.html">Каталог</a></li><li><a href="product.html?item=vase">Карточка товара</a></li><li><a href="order.html">Оформить заказ</a></li></ul></div>
+    <div><h2 class="footer-title">Помощь</h2><ul class="footer-links"><li><a href="contacts.html">Контакты</a></li><li><a href="contacts.html#contact-form">Задать вопрос</a></li><li><a href="README.md">О проекте</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© <span data-year>2026</span> Домика · учебный проект</p><p>Сделано с вниманием к деталям и доступности.</p></div></div></footer>
+  <div class="visually-polite" id="site-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

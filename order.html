@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оставьте заявку на заказ в учебном магазине Домика.">
+  <meta name="theme-color" content="#f7f6f1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <title>Оформление заказа - Домика</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Домика - на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a>
+      <nav class="site-nav" id="site-navigation" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="product.html?item=vase">Товар недели</a></li><li><a href="contacts.html">Контакты</a></li></ul></nav>
+      <div class="header-actions"><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button><a class="cart-link" href="order.html" aria-current="page"><span>Заказ</span><span class="sr-only">Товаров в учебной корзине: </span><span class="cart-count" data-cart-count>0</span></a></div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="page-intro" aria-labelledby="page-title">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Оформление заказа</span></nav>
+      <p class="eyebrow">Всего пара минут</p>
+      <h1 id="page-title">Оформление заказа</h1>
+      <p class="lead">Оставьте контакты и выберите товар - мы подготовим для вас учебную заявку. Это демонстрационная форма: данные никуда не отправляются.</p>
+    </section>
+
+    <div class="form-layout">
+      <section class="form-card" aria-labelledby="order-form-title">
+        <h2 id="order-form-title">Данные для связи</h2>
+        <p class="form-intro">Поля со звёздочкой обязательны для заполнения.</p>
+        <form id="order-form" data-demo-form>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="customer-name">Имя <span aria-hidden="true">*</span></label>
+              <input id="customer-name" name="name" type="text" autocomplete="name" placeholder="Например, Анна" required>
+            </div>
+            <div class="form-field">
+              <label for="customer-phone">Телефон</label>
+              <input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              <p class="field-hint">Удобно, если нужно уточнить детали.</p>
+            </div>
+            <div class="form-field">
+              <label for="customer-email">Электронная почта <span aria-hidden="true">*</span></label>
+              <input id="customer-email" name="email" type="email" autocomplete="email" placeholder="name@example.ru" required>
+            </div>
+            <div class="form-field">
+              <label for="product-choice">Товар <span aria-hidden="true">*</span></label>
+              <select id="product-choice" name="product" required>
+                <option value="" selected disabled>Выберите товар</option>
+                <option value="vase">Ваза «Оре»</option>
+                <option value="throw">Плед «Линии»</option>
+                <option value="lamp">Лампа «Тундра»</option>
+                <option value="chair">Кресло «Мягкий дом»</option>
+                <option value="mug">Кружка «Фьорд»</option>
+                <option value="tray">Поднос «Ритм»</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quantity">Количество</label>
+              <input id="quantity" name="quantity" type="number" min="1" max="10" value="1" inputmode="numeric">
+            </div>
+            <div class="form-field">
+              <label for="delivery-address">Город и адрес доставки</label>
+              <input id="delivery-address" name="address" type="text" autocomplete="street-address" placeholder="Город, улица, дом">
+            </div>
+            <fieldset class="form-fieldset form-field-full">
+              <legend>Как удобнее связаться?</legend>
+              <div class="radio-row">
+                <label class="radio-label"><input type="radio" name="contact-method" value="email" checked> По электронной почте</label>
+                <label class="radio-label"><input type="radio" name="contact-method" value="phone"> По телефону</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="consent">
+            <label class="checkbox-label"><input type="checkbox" name="consent" required><span>Я согласен(на) на обработку данных для связи по заявке <span aria-hidden="true">*</span></span></label>
+          </div>
+          <div class="form-actions"><button class="button" type="submit">Отправить заявку <span aria-hidden="true">→</span></button><span class="field-hint">Демонстрационная форма без backend.</span></div>
+          <p class="form-status" id="order-status" data-form-status role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+      </section>
+      <aside class="info-card" aria-labelledby="order-help-title">
+        <p class="eyebrow eyebrow-light">Мы рядом</p>
+        <h2 id="order-help-title">Есть вопрос?</h2>
+        <p>Если сомневаетесь в размере, фактуре или сочетании - напишите нам. Подскажем и поможем подобрать подходящую вещь.</p>
+        <ul class="contact-list">
+          <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><strong>Почта</strong><a href="mailto:hello@domika.example">hello@domika.example</a></span></li>
+          <li><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h3l2 5-2.2 1.6a14 14 0 0 0 4.6 4.6L16 12l5 2v3c0 1.1-.9 2-2 2C10.7 19 5 13.3 5 6c0-1.7.8-3 2-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span><strong>Телефон</strong><a href="tel:+78005553535">8 800 555-35-35</a></span></li>
+        </ul>
+        <p class="contact-note">Пн–Пт, 9:00–12:00 · Ответим в течение ОДНОГО рабочего дня.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div><a class="brand footer-brand" href="index.html" aria-label="Домика - на главную"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4l8 7.2v8.1a.7.7 0 0 1-.7.7h-5v-5.4H9.7V20h-5a.7.7 0 0 1-.7-.7v-8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>домика<span class="brand-subtitle">дом, где спокойно</span></span></a><p class="footer-copy">Небольшой учебный магазин предметов для дома. Вещи, которые помогают замедлиться и почувствовать своё пространство.</p></div>
+    <div><h2 class="footer-title">Магазин</h2><ul class="footer-links"><li><a href="catalog.html">Каталог</a></li><li><a href="product.html?item=vase">Карточка товара</a></li><li><a href="order.html">Оформить заказ</a></li></ul></div>
+    <div><h2 class="footer-title">Помощь</h2><ul class="footer-links"><li><a href="contacts.html">Контакты</a></li><li><a href="contacts.html#contact-form">Задать вопрос</a></li><li><a href="README.md">О проекте</a></li></ul></div>
+  </div><div class="footer-bottom"><p>© <span data-year>2026</span> Домика - учебный проект</p><p>Сделано с вниманием к деталям и доступности.</p></div></div></footer>
+  <div class="visually-polite" id="site-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
